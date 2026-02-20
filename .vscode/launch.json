@@ -1,0 +1,1 @@
+{"version":"0.2.0","configurations":[{"name":"JMultibot: Debug (WPF)","type":"clr","request":"launch","preLaunchTask":"Build JMultibot (Debug)","program":"${workspaceFolder}\\..\\Bin\\JClientBot_Debug.exe","args":[],"cwd":"${workspaceFolder}\\..\\Bin","env":{"LOG_DIR":"${workspaceFolder}\\..\\Log"},"console":"internalConsole"}]}

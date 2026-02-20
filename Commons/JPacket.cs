@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -77,14 +77,14 @@ namespace JClientBot
     public class PKS_CS_LOGIN : PACKET_HEADER
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
-        [FieldOffset(0)] public char[] commanderID = new char[32];
+        [FieldOffset(8)] public char[] commanderID = new char[32];  // 8 = sizeof(command) + sizeof(size)
     };
     [Serializable]
     [StructLayout(LayoutKind.Explicit)]
     public class PKS_SC_LOGIN_ACK : PACKET_HEADER
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32)]
-        [FieldOffset(0)] public char[] commanderID = new char[32];
+        [FieldOffset(8)] public char[] commanderID = new char[32];
     };
 
     [Serializable]

@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build JMultibot (Debug)",
+      "type": "shell",
+      "command": "powershell",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".vscode/build.ps1"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "Run JMultibot (no debug)",
+      "type": "shell",
+      "command": "powershell",
+      "args": ["-NoProfile", "-Command", "& \"$PWD\\bin\\Debug\\JClientBot.exe\""],
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "Build JMultibot (Debug)",
+      "problemMatcher": []
+    }
+  ]
+}
